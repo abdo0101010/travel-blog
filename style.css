@@ -20,6 +20,10 @@ body {
     margin: 0 auto;
 }
 
+section {
+    margin: 50px 0;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -45,6 +49,7 @@ a:hover {
     width: 100%;
     height: 70px;
     border-radius: 5px;
+    margin: 0;
 
     header {
         display: flex;
@@ -224,16 +229,32 @@ a:hover {
 
 
 #subscribe {
+    width: 100%;
     text-align: center;
-    padding: 2rem;
+    width: 80%;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: var(--Buttons-color);
+    }
+
+
 }
 
 form {
     display: inline-block;
-    background: white;
     padding: 1rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--Header-color);
+    gap: 1rem;
+
 }
 
 form input {
@@ -241,15 +262,28 @@ form input {
     margin: 0.5rem 0;
     padding: 0.5rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+
+
+form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--Buttons-color);
 }
 
 form button {
-    background-color: #FF4500;
-    /* orange-red */
+    background-color: var(--Buttons-color);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+#error{
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
 }
