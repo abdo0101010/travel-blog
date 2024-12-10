@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <section class="nav">
+            <header>
+                <div class="logo">
+                    <a href=""><img src="img/download.jpeg" alt=""></a>
+                    <p>wanderworld</p>
+                </div>
+                <div class="links">
+                    <a href="#">home</a>
+                    <a href="">posts</a>
+                    <a href="">subscribe</a>
+
+                </div>
+                <div class="input">
+                    <input type="search" name="" id="" placeholder="search  ........">
+
+                </div>
+
+            </header>
+        </section>
+        <section>
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Discover the World</h2>
+                    <p>Explore the best travel destinations with us.</p>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section id="recent-posts">
+        <div class="top-posts">
+            <h2>Recent <span>posts</span></h2>
+        </div>
+
+        <div class="posts-grid">
+            <div class="post-card">
+                <img src="img/inject-blog-service_1733783195713.png" alt="Post 1">
+                <h3 id="ahmed">ahmed mohab</h3>
+                <h4>Must-Have Travel Essentials for Yo...
+                </h4>
+                <p>Are you getting ready for your next travel adventure but not sure what to pack? Look no further! We
+                    have...
+
+                </p>
+                <hr>
+                <div class="icon">
+                    <i class="fa-regular fa-eye"><span>0</span></i>
+                    <i onclick="change_heart()" class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="img/inject-blog-service_1733783195354.png" alt="Post 2">
+                <h3 id="abdo">abdelrhman mahmoud</h3>
+                <h4>Ultimate Guide to Budget-Friendly...
+                </h4>
+                <p>Are you dreaming of traveling the world but worried about breaking the bank? Fear not, as we've
+                    compiled...
+
+                </p>
+                <hr>
+                <div class="icon">
+                    <i class="fa-regular fa-eye"><span>0</span></i>
+                    <i  onclick="change_heart()" class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="img/inject-blog-service_1733783195329.png" alt="Post 3">
+                <h3 id="mohmed">mohmed ahmed</h3>
+                <h4>Discover the Top Travel Destinations
+                </h4>
+                <p>Are you looking to satisfy your wanderlust in 2021? With the world slowly opening up again, it's the
+                    perfect time
+
+                <p>
+                    <hr>
+                <div class="icon">
+                    <i class="fa-regular fa-eye"><span>0</span></i>
+                    <i onclick="change_heart()" class="fa-regular fa-heart heart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="subscribe">
+        <h2>Subscribe</h2>
+        <form id="subscription-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Carousel</title>
+    <style>
+        .carousel {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1">
+            <img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2">
+            <img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Code
+        const carousel = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let index = 0;
+
+        function updateCarousel() {
+            const width = images[0].clientWidth;
+            carousel.style.transform = `translateX(-${index * width}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            index = (index + 1) % images.length; // Loop back to the first slide
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length; // Loop back to the last slide
+            updateCarousel();
+        });
+
+        // Optional: Auto Slide
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        }, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+
+</html> --> -->
