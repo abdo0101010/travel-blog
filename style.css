@@ -62,16 +62,30 @@ a:hover {
             border-radius: 50%;
         }
 
-        .logo,
-        .links {
+        .output {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            width: 65%;
+        }
+
+        .logo {
+            width: 20%;
+            justify-content: center;
             gap: 15px;
         }
 
+        .logo,
         .links {
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+        }
+
+        .links {
+            width: 50%;
             letter-spacing: 1px;
+            justify-content: space-between;
         }
 
         input {
@@ -148,6 +162,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+    
 }
 
 .post-card {
@@ -281,9 +296,110 @@ form button {
     cursor: pointer;
     border-radius: 10px;
 }
-#error{
-    color: red;
+
+#ErrorName,
+#ErrorEmail {
+    color: rgb(164, 5, 5);
     font-size: 18px;
-    margin-top: 10px;
-    font-weight: 600;
+
+    font-weight: 400;
+}
+.active-output {
+    left: 0 !important;
+}
+
+
+
+
+
+.menu,
+.img,
+.exit-menu {
+    display: none;
+}
+
+
+
+@media (max-width:1350px) {
+    .nav {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:1150px) {
+    .nav .output {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        padding: 50px 0;
+        justify-content: center !important;
+        gap: 50px;
+        flex-direction: column-reverse;
+        border-right: var(--Header-color) 1px solid;
+        align-items: center;
+        height: 100%;
+        background-color: var(--Header-color);
+        transition: 0.3s ease-in-out;
+        left: -100%;
+        z-index: 1000;
+        .links {
+            color: black;
+            ;
+            align-items: center;
+            flex-direction: column;
+            height: 40%;
+
+        }
+
+
+        .input {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 60%;
+            gap: 50px;
+
+            .img,
+            .exit-menu {
+                display: block;
+
+            }
+
+            .exit-menu {
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                cursor: pointer;
+            }
+
+        }
+
+
+
+    }
+
+    .nav header .menu {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+@media (max-width:700px) {
+    .nav .output {
+        width: 100%;
+
+    }
+    .nav .logo {
+        width: 100%;
+        img{
+            margin-left:  30px;
+        }
+    }
+
+    .hero{
+      .hero-text  {
+        h2{ font-size: 35px;}
+        p{ font-size: 20px;}
+        }
+    }
 }
