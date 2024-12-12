@@ -88,3 +88,30 @@ function toggleHeart(element){
   element.classList.toggle("fa-regular");
 }
 
+let head_text = document.querySelector("#head-hero");
+let subtitle_hero = document.querySelector("#subtitle-hero");
+console.log(head_text);
+console.log(subtitle_hero);
+const head = "Discover the World";
+const subtitle = "Explore the beauty of the world with us.";
+
+
+
+let index=0;
+function change_text() {
+  if(index<head.length){
+    head_text.innerHTML+=head.charAt(index);
+    index++;
+    setTimeout(change_text,100);
+  }
+}
+change_text();
+let index2=0;
+function change_subtitle() {
+  if(index<subtitle.length){
+    subtitle_hero.innerHTML+=subtitle.charAt(index2);
+    index2++;
+    setTimeout(change_subtitle,50);
+  }
+}
+change_subtitle();
