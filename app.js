@@ -58,30 +58,29 @@ function toggleMenu() {
   console.log("click");
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".post-card"); // البطاقات
-  let currentIndex = 0; // الفهرس الحالي
-
+  const cards = document.querySelectorAll(".post-card");
+  let currentIndex = 0;
   // وظيفة لتحديث العرض
   const updateCards = () => {
     cards.forEach((card, index) => {
-      // إخفاء كل البطاقات عدا البطاقة الحالية
+    
       card.style.display = index === currentIndex ? "block" : "none";
     });
   };
 
   // السهم التالي
   window.nextCard = () => {
-    currentIndex = (currentIndex + 1) % cards.length; // الانتقال إلى البطاقة التالية
+    currentIndex = (currentIndex + 1) % cards.length;  
     updateCards();
   };
 
   // السهم السابق
   window.prevCard = () => {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length; // العودة إلى البطاقة السابقة
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length; 
     updateCards();
   };
 
-  // تحديث العرض عند بدء التشغيل
+
   updateCards();
 });
 function toggleHeart(element){
