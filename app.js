@@ -3,7 +3,8 @@ function change_heart() {
   const heartIcon = document.querySelector(".fa-heart");
   heartIcon.classList.toggle("fa-regular");
   heartIcon.classList.toggle("fa-solid");
-}
+};
+
 let ErrorName = document.getElementById("ErrorName");
 let ErrorEmail = document.getElementById("ErrorEmail");
 let form = document.getElementById("subscription-form");

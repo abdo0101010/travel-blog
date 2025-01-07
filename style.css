@@ -384,7 +384,7 @@ form button {
 
         .links {
             color: black;
-            ;
+            font-size: 25px;
             align-items: center;
             flex-direction: column;
             
@@ -403,6 +403,14 @@ form button {
             .exit-menu {
                 display: block;
 
+            }
+            .logo a{
+                width: 70px;
+                height: 70px;
+                img {
+                        width: 70px ;
+                        height: 70px;
+                    }
             }
 
             .exit-menu {
@@ -453,7 +461,6 @@ form button {
 }
 ::-webkit-scrollbar {
     width: 20px;
-    /* عرض السكروول */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -463,5 +470,4 @@ form button {
 
 ::-webkit-scrollbar-track {
     background-color:var(--Header-color);
-    /* خلفية المسار */
 }
